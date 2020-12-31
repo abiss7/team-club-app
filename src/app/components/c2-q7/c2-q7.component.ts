@@ -43,7 +43,7 @@ export class C2Q7Component implements OnInit {
     }
     else {
 
-      this.continuar.emit( { pageNumber: 18, response: { respuesta, errores: this.errores } });
+      this.continuar.emit( { pageNumber: 18, response: { pregunta: 'Quién del equipo usa más metáforas para explicar algo?', respuesta, errores: this.errores } });
     }
 
   }

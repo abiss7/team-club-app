@@ -12,7 +12,7 @@ export class QuestionComponent implements OnInit {
   pageNumber = 0;
   formGroup: FormGroup;
   respuestas = [];
-  pdf = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
+  pdf = "assets/files/unas palabras de fin de año.pdf";
 
   constructor(
     private formBuilder: FormBuilder,
@@ -46,10 +46,13 @@ export class QuestionComponent implements OnInit {
       const data = {
 
         name: this.respuestas[0],
-        respuestas: this.respuestas.slice(1)
+        preguntas: this.respuestas.slice(1).map(i => i.pregunta),
+        respuestas: this.respuestas.slice(1).map(i => i.respuesta),
+        errores: this.respuestas.slice(1).map(i => i.errores)
       };
 
-      await this.respuestaService.save(data);
+      const resp = await this.respuestaService.save(data);
+      console.log(resp);
     }
   }
 

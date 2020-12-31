@@ -43,7 +43,7 @@ export class C1Q1Component implements OnInit {
     }
     else {
 
-      this.continuar.emit( { pageNumber: 2, response: { respuesta, errores: this.errores } });
+      this.continuar.emit( { pageNumber: 2, response: { pregunta: '¿Quién o quiénes se tuvo o tuvieron que ir del equipo por fuerzas mayores?', respuesta, errores: this.errores } });
     }
 
   }

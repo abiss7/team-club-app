@@ -43,7 +43,7 @@ export class C2Q13Component implements OnInit {
     }
     else {
 
-      this.continuar.emit( { pageNumber: 24, response: { respuesta, errores: this.errores } });
+      this.continuar.emit( { pageNumber: 24, response: { pregunta: 'Quién necesita cambiar la conexión a Internet?', respuesta, errores: this.errores } });
     }
 
   }

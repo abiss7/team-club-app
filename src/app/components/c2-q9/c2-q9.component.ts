@@ -43,7 +43,7 @@ export class C2Q9Component implements OnInit {
     }
     else {
 
-      this.continuar.emit( { pageNumber: 20, response: { respuesta, errores: this.errores } });
+      this.continuar.emit( { pageNumber: 20, response: { pregunta: 'Quién usa más el emoTi?', respuesta, errores: this.errores } });
     }
 
   }

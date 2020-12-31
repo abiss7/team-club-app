@@ -43,7 +43,7 @@ export class C1Q6Component implements OnInit {
     }
     else {
 
-      this.continuar.emit( { pageNumber: 7, response: { respuesta, errores: this.errores } });
+      this.continuar.emit( { pageNumber: 7, response: { pregunta: 'Qué dejó de andar hasta el día de hoy?', respuesta, errores: this.errores } });
     }
 
   }

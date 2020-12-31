@@ -53,7 +53,7 @@ export class C1Q7Component implements OnInit {
         confirmButtonText: `Continuar`,
       }).then((result) => {
         
-        this.continuar.emit( { pageNumber: 8, response: { respuesta, errores: this.errores } });
+        this.continuar.emit( { pageNumber: 8, response: { pregunta: 'Qué palabra resumiría adecuadamente cada retro o reunión?', respuesta, errores: this.errores } });
       });
     }
 

@@ -52,7 +52,7 @@ export class C1Q10Component implements OnInit {
         confirmButtonText: `Continuar`,
       }).then((result) => {
         
-        this.continuar.emit( { pageNumber: 11, response: { respuesta, errores: this.errores } });
+        this.continuar.emit( { pageNumber: 11, response: { pregunta: 'Cuál es el nombre del siguiente personaje?', respuesta, errores: this.errores } });
       });
     }
 

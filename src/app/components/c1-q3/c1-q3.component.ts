@@ -43,7 +43,7 @@ export class C1Q3Component implements OnInit {
     }
     else {
 
-      this.continuar.emit( { pageNumber: 4, response: { respuesta, errores: this.errores } });
+      this.continuar.emit( { pageNumber: 4, pregunta: 'Cómo se pensaba Credencial Virtual en la etapa previa a empezar?', response: { respuesta, errores: this.errores } });
     }
 
   }

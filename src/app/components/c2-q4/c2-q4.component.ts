@@ -43,7 +43,7 @@ export class C2Q4Component implements OnInit {
     }
     else {
 
-      this.continuar.emit( { pageNumber: 15, response: { respuesta, errores: this.errores } });
+      this.continuar.emit( { pageNumber: 15, response: { pregunta: 'Qué palabra odia más Meli?', respuesta, errores: this.errores } });
     }
 
   }

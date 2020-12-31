@@ -51,7 +51,7 @@ export class C2Q5Component implements OnInit {
         confirmButtonText: `Continuar`,
       }).then((result) => {
         
-        this.continuar.emit( { pageNumber: 16, response: { respuesta, errores: this.errores } });
+        this.continuar.emit( { pageNumber: 16, response: { pregunta: 'Qué tecnología es candidata que tome Rodo en un futuro (no tan lejano)?', respuesta, errores: this.errores } });
       });
     }
 

@@ -1,8 +1,9 @@
 <div class="row mt-5">
     <div class="col-12">
         <span [ngSwitch]="pageNumber">
-            
-            <form class="animate__animated animate__fadeInRight" *ngSwitchCase="0" [formGroup]="formGroup" novalidate="novalidate" (submit)="guardarForm($event)">
+
+            <form class="animate__animated animate__fadeInRight" *ngSwitchCase="0" [formGroup]="formGroup"
+                novalidate="novalidate" (submit)="guardarForm($event)">
 
                 <div class="form-group">
                     <input type="text" class="form-control" id="name" formControlName="name" placeholder="Nombre">
@@ -14,8 +15,9 @@
                         Se ha excedido de caracteres permitidos
                     </div>
                 </div>
-                
-                <button type="submit" class="btn btn-primary btn-block mt-2 mb-5" [disabled]="formGroup?.get('name').invalid">
+
+                <button type="submit" class="btn btn-primary btn-block mt-2 mb-5"
+                    [disabled]="formGroup?.get('name').invalid">
                     Continuar
                 </button>
             </form>
@@ -91,10 +93,20 @@
             <p *ngSwitchCase="23">
                 <app-c2-q13 (continuar)="updatePage($event)"></app-c2-q13>
             </p>
+            <p *ngSwitchCase="24">                
+                <button type="button" (click)="updatePage({pageNumber: 25})" class="btn btn-primary justify-content-end btn-block mt-2 mb-5">
+                    Ver Fotos
+                </button>
+                <pdf-viewer [src]="pdf" [original-size]="false" [zoom]="1.3"></pdf-viewer>
+                <button type="button" (click)="updatePage({pageNumber: 25})" class="btn btn-primary justify-content-end btn-block mt-2 mb-5">
+                    Ver Fotos
+                </button>
+            </p>
             <p *ngSwitchDefault>
-                <pdf-viewer [src]="pdf"
-                          [original-size]="false"
-              ></pdf-viewer>
+                <app-foto (continuar)="updatePage($event)"></app-foto>
+                <button type="button" (click)="updatePage({pageNumber: 0})" class="btn btn-primary justify-content-end btn-block mt-2 mb-5">
+                    Volver al inicio
+                </button>
             </p>
         </span>
     </div>

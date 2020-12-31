@@ -43,7 +43,7 @@ export class C2Q8Component implements OnInit {
     }
     else {
 
-      this.continuar.emit( { pageNumber: 19, response: { respuesta, errores: this.errores } });
+      this.continuar.emit( { pageNumber: 19, response: { pregunta: 'A quién del Team le encantan las motos?', respuesta, errores: this.errores } });
     }
 
   }

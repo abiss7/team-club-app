@@ -51,7 +51,7 @@ export class C2Q11Component implements OnInit {
         confirmButtonText: `Continuar`,
       }).then((result) => {
         
-        this.continuar.emit( { pageNumber: 22, response: { respuesta, errores: this.errores } });
+        this.continuar.emit( { pageNumber: 22, response: { pregunta: 'Quién puso menos la cámara a lo largo del año?', respuesta, errores: this.errores } });
       });
     }
 

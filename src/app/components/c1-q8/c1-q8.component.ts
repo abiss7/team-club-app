@@ -43,7 +43,7 @@ export class C1Q8Component implements OnInit {
     }
     else {
 
-      this.continuar.emit( { pageNumber: 9, response: { respuesta, errores: this.errores } });
+      this.continuar.emit( { pageNumber: 9, response: { pregunta: 'Quién se ganó el título de "El crack del MERGE"?', respuesta, errores: this.errores } });
     }
 
   }

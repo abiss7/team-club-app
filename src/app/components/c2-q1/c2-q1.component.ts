@@ -43,7 +43,7 @@ export class C2Q1Component implements OnInit {
     }
     else {
 
-      this.continuar.emit( { pageNumber: 12, response: { respuesta, errores: this.errores } });
+      this.continuar.emit( { pageNumber: 12, response: { pregunta: 'A quién del equipo le gusta o gustaba Tintín?', respuesta, errores: this.errores } });
     }
 
   }

@@ -43,7 +43,7 @@ export class C1Q9Component implements OnInit {
     }
     else {
 
-      this.continuar.emit( { pageNumber: 10, response: { respuesta, errores: this.errores } });
+      this.continuar.emit( { pageNumber: 10, response: { pregunta: 'Qué grupo de palabras resonaron mucho durante este año?', respuesta, errores: this.errores } });
     }
 
   }

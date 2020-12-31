@@ -43,7 +43,7 @@ export class C1Q2Component implements OnInit {
     }
     else {
 
-      this.continuar.emit( { pageNumber: 3, response: { respuesta, errores: this.errores } });
+      this.continuar.emit( { pageNumber: 3, response: { pregunta: '¿Qué parte del sitio de Club se renovó completamente?', respuesta, errores: this.errores } });
     }
 
   }

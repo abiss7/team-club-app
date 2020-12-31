@@ -43,7 +43,7 @@ export class C2Q6Component implements OnInit {
     }
     else {
 
-      this.continuar.emit( { pageNumber: 17, response: { respuesta, errores: this.errores } });
+      this.continuar.emit( { pageNumber: 17, response: { pregunta: 'Cuando Xime habla de CRIPTONITA, a qué se refiere?', respuesta, errores: this.errores } });
     }
 
   }

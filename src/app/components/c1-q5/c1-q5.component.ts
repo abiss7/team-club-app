@@ -43,7 +43,7 @@ export class C1Q5Component implements OnInit {
     }
     else {
 
-      this.continuar.emit( { pageNumber: 6, response: { respuesta, errores: this.errores } });
+      this.continuar.emit( { pageNumber: 6, response: { pregunta: 'Con qué tecnología se innovó?', respuesta, errores: this.errores } });
     }
 
   }

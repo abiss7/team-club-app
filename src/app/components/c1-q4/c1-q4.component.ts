@@ -43,7 +43,7 @@ export class C1Q4Component implements OnInit {
     }
     else {
 
-      this.continuar.emit( { pageNumber: 5, response: { respuesta, errores: this.errores } });
+      this.continuar.emit( { pageNumber: 5, response: { pregunta: 'Quiénes ingresaron al Team en el transcurso de este año?', respuesta, errores: this.errores } });
     }
 
   }

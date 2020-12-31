@@ -43,7 +43,7 @@ export class C2Q2Component implements OnInit {
     }
     else {
 
-      this.continuar.emit( { pageNumber: 13, response: { respuesta, errores: this.errores } });
+      this.continuar.emit( { pageNumber: 13, response: { pregunta: 'Quién del Team tiene alma de mecánico?', respuesta, errores: this.errores } });
     }
 
   }

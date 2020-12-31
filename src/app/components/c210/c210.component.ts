@@ -51,7 +51,7 @@ export class C210Component implements OnInit {
         confirmButtonText: `Continuar`,
       }).then((result) => {
         
-        this.continuar.emit( { pageNumber: 21, response: { respuesta, errores: this.errores } });
+        this.continuar.emit( { pageNumber: 21, response: { pregunta: 'A quién le gusta sacar los cuchillos cuando hay diferencias de opiniones en las reuniones?r', respuesta, errores: this.errores } });
       });
     }
 

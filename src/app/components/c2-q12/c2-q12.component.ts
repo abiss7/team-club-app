@@ -51,7 +51,7 @@ export class C2Q12Component implements OnInit {
         confirmButtonText: `Continuar`,
       }).then((result) => {
         
-        this.continuar.emit( { pageNumber: 23, response: { respuesta, errores: this.errores } });
+        this.continuar.emit( { pageNumber: 23, response: { pregunta: 'Cuáles son los tipos de chistes que hacen reir más a Pablo?', respuesta, errores: this.errores } });
       });
     }
 

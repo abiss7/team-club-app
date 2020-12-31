@@ -32,7 +32,8 @@ import { C210Component } from './components/c210/c210.component';
 import { C2Q11Component } from './components/c2-q11/c2-q11.component';
 import { C2Q12Component } from './components/c2-q12/c2-q12.component';
 import { C2Q13Component } from './components/c2-q13/c2-q13.component';
-import { ConclusionComponent } from './components/conclusion/conclusion.component';
+import { FotoComponent } from './components/foto/foto.component';
+import { ResultComponent } from './components/result/result.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { ConclusionComponent } from './components/conclusion/conclusion.componen
     C2Q11Component,
     C2Q12Component,
     C2Q13Component,
-    ConclusionComponent
+    FotoComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,

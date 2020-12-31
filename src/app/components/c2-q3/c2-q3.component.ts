@@ -43,7 +43,7 @@ export class C2Q3Component implements OnInit {
     }
     else {
 
-      this.continuar.emit( { pageNumber: 14, response: { respuesta, errores: this.errores } });
+      this.continuar.emit( { pageNumber: 14, response: { pregunta: 'Cuál es la comida rápida de Pablo?', respuesta, errores: this.errores } });
     }
 
   }

@@ -1,0 +1,34 @@
+<div class="card animate__animated animate__fadeInRight">
+    <div class="card-header">
+        <strong>Categoría Formal: </strong>
+        Pregunta 9
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Qué grupo de palabras resonaron mucho durante este año?</h5>
+
+        <form [formGroup]="formGroup" novalidate="novalidate" (submit)="continue($event)">
+
+            <div class="form-group mt-5">
+                <div class="custom-control custom-radio">
+                    <input type="radio" formControlName="question" id="opcion1" name="question" value="IONIC, Angular, React, NextJs, Auth0"
+                        class="custom-control-input">
+                    <label class="custom-control-label" for="opcion1">IONIC, Angular, React, NextJs, Auth0</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" formControlName="question" id="opcion2" name="question" value="FICHA, Componentización, Redux"
+                        class="custom-control-input">
+                    <label class="custom-control-label" for="opcion2">FICHA, Componentización, Redux</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" formControlName="question" id="opcion3" name="question" value="Refactor, RARO, Fecha, Tour Virtual"
+                        class="custom-control-input">
+                    <label class="custom-control-label" for="opcion3">Refactor, RARO, Fecha, Tour Virtual</label>
+                </div>
+            </div>
+    
+            <button type="submit" class="btn btn-primary mt-5" [disabled]="formGroup?.invalid">
+                Continuar
+            </button>
+        </form>
+    </div>
+</div>

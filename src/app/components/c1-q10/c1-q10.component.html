@@ -1,0 +1,38 @@
+<div class="card animate__animated animate__fadeInRight">
+    <div class="card-header">
+        <strong>Categoría Formal: </strong>
+        Pregunta 10
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Cuál es el nombre del siguiente personaje?</h5>
+
+        <div class="card">
+            <img src="assets/images/javi-aquino.png" class="card-img-top" alt="foto">
+        </div>
+
+        <form [formGroup]="formGroup" novalidate="novalidate" (submit)="continue($event)">
+
+            <div class="form-group mt-5">
+                <div class="custom-control custom-radio">
+                    <input type="radio" formControlName="question" id="opcion1" name="question" value="Javier Santillán"
+                        class="custom-control-input">
+                    <label class="custom-control-label" for="opcion1">Javier Santillán</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" formControlName="question" id="opcion2" name="question"
+                        value="Javier Alessandrino" class="custom-control-input">
+                    <label class="custom-control-label" for="opcion2">Javier Alessandrino</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" formControlName="question" id="opcion3" name="question" value="Javier Aquino"
+                        class="custom-control-input">
+                    <label class="custom-control-label" for="opcion3">Javier Aquino</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-5" [disabled]="formGroup?.invalid">
+                Continuar
+            </button>
+        </form>
+    </div>
+</div>

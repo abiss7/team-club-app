@@ -1,0 +1,101 @@
+<div class="row mt-5">
+    <div class="col-12">
+        <span [ngSwitch]="pageNumber">
+            
+            <form class="animate__animated animate__fadeInRight" *ngSwitchCase="0" [formGroup]="formGroup" novalidate="novalidate" (submit)="guardarForm($event)">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name" formControlName="name" placeholder="Nombre">
+                    <div *ngIf="(formGroup?.get('name')?.dirty || formGroup?.get('name')?.touched) && formGroup?.get('name')?.errors?.required"
+                        class="alert alert-danger" role="alert">
+                        El nombre es necesario
+                    </div>
+                    <div *ngIf="formGroup?.get('name')?.errors?.maxlength" class="alert alert-danger" role="alert">
+                        Se ha excedido de caracteres permitidos
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block mt-2 mb-5" [disabled]="formGroup?.get('name').invalid">
+                    Continuar
+                </button>
+            </form>
+
+            <p *ngSwitchCase="1">
+
+                <app-c1-q1 (continuar)="updatePage($event)"></app-c1-q1>
+
+            </p>
+            <p *ngSwitchCase="2">
+                <app-c1-q2 (continuar)="updatePage($event)"></app-c1-q2>
+            </p>
+            <p *ngSwitchCase="3">
+                <app-c1-q3 (continuar)="updatePage($event)"></app-c1-q3>
+            </p>
+            <p *ngSwitchCase="4">
+                <app-c1-q4 (continuar)="updatePage($event)"></app-c1-q4>
+            </p>
+            <p *ngSwitchCase="5">
+                <app-c1-q5 (continuar)="updatePage($event)"></app-c1-q5>
+            </p>
+            <p *ngSwitchCase="6">
+                <app-c1-q6 (continuar)="updatePage($event)"></app-c1-q6>
+            </p>
+            <p *ngSwitchCase="7">
+                <app-c1-q7 (continuar)="updatePage($event)"></app-c1-q7>
+            </p>
+            <p *ngSwitchCase="8">
+                <app-c1-q8 (continuar)="updatePage($event)"></app-c1-q8>
+            </p>
+            <p *ngSwitchCase="9">
+                <app-c1-q9 (continuar)="updatePage($event)"></app-c1-q9>
+            </p>
+            <p *ngSwitchCase="10">
+                <app-c1-q10 (continuar)="updatePage($event)"></app-c1-q10>
+            </p>
+            <p *ngSwitchCase="11">
+                <app-c2-q1 (continuar)="updatePage($event)"></app-c2-q1>
+            </p>
+            <p *ngSwitchCase="12">
+                <app-c2-q2 (continuar)="updatePage($event)"></app-c2-q2>
+            </p>
+            <p *ngSwitchCase="13">
+                <app-c2-q3 (continuar)="updatePage($event)"></app-c2-q3>
+            </p>
+            <p *ngSwitchCase="14">
+                <app-c2-q4 (continuar)="updatePage($event)"></app-c2-q4>
+            </p>
+            <p *ngSwitchCase="15">
+                <app-c2-q5 (continuar)="updatePage($event)"></app-c2-q5>
+            </p>
+            <p *ngSwitchCase="16">
+                <app-c2-q6 (continuar)="updatePage($event)"></app-c2-q6>
+            </p>
+            <p *ngSwitchCase="17">
+                <app-c2-q7 (continuar)="updatePage($event)"></app-c2-q7>
+            </p>
+            <p *ngSwitchCase="18">
+                <app-c2-q8 (continuar)="updatePage($event)"></app-c2-q8>
+            </p>
+            <p *ngSwitchCase="19">
+                <app-c2-q9 (continuar)="updatePage($event)"></app-c2-q9>
+            </p>
+            <p *ngSwitchCase="20">
+                <app-c210 (continuar)="updatePage($event)"></app-c210>
+            </p>
+            <p *ngSwitchCase="21">
+                <app-c2-q11 (continuar)="updatePage($event)"></app-c2-q11>
+            </p>
+            <p *ngSwitchCase="22">
+                <app-c2-q12 (continuar)="updatePage($event)"></app-c2-q12>
+            </p>
+            <p *ngSwitchCase="23">
+                <app-c2-q13 (continuar)="updatePage($event)"></app-c2-q13>
+            </p>
+            <p *ngSwitchDefault>
+                <pdf-viewer [src]="pdf"
+                          [original-size]="false"
+              ></pdf-viewer>
+            </p>
+        </span>
+    </div>
+</div>

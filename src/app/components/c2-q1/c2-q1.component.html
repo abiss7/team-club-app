@@ -1,0 +1,38 @@
+<div class="card animate__animated animate__fadeInRight">
+    <div class="card-header">
+        <strong>Categoría Informal: </strong>
+        Pregunta 11
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">A quién del equipo le gusta o gustaba Tintín?</h5>
+
+        <div class="card">
+            <img src="assets/images/tintin.png" class="card-img-top" alt="foto">
+        </div>
+
+        <form [formGroup]="formGroup" novalidate="novalidate" (submit)="continue($event)">
+
+            <div class="form-group mt-5">
+                <div class="custom-control custom-radio">
+                    <input type="radio" formControlName="question" id="opcion1" name="question" value="A Marto"
+                        class="custom-control-input">
+                    <label class="custom-control-label" for="opcion1">A Marto</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" formControlName="question" id="opcion2" name="question"
+                        value="A Nacho" class="custom-control-input">
+                    <label class="custom-control-label" for="opcion2">A Nacho</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" formControlName="question" id="opcion3" name="question" value="A Pablo"
+                        class="custom-control-input">
+                    <label class="custom-control-label" for="opcion3">A Pablo</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-5" [disabled]="formGroup?.invalid">
+                Continuar
+            </button>
+        </form>
+    </div>
+</div>

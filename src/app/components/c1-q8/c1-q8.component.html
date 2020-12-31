@@ -1,0 +1,34 @@
+<div class="card animate__animated animate__fadeInRight">
+    <div class="card-header">
+        <strong>Categoría Formal: </strong>
+        Pregunta 8
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Quién se ganó el título de "El crack del MERGE"?</h5>
+
+        <form [formGroup]="formGroup" novalidate="novalidate" (submit)="continue($event)">
+
+            <div class="form-group mt-5">
+                <div class="custom-control custom-radio">
+                    <input type="radio" formControlName="question" id="opcion1" name="question" value="Marto"
+                        class="custom-control-input">
+                    <label class="custom-control-label" for="opcion1">Marto</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" formControlName="question" id="opcion2" name="question" value="Rodrigo Cámara Robles"
+                        class="custom-control-input">
+                    <label class="custom-control-label" for="opcion2">Rodrigo Cámara Robles</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" formControlName="question" id="opcion3" name="question" value="Ariel Mulet"
+                        class="custom-control-input">
+                    <label class="custom-control-label" for="opcion3">Ariel Mulet</label>
+                </div>
+            </div>
+    
+            <button type="submit" class="btn btn-primary mt-5" [disabled]="formGroup?.invalid">
+                Continuar
+            </button>
+        </form>
+    </div>
+</div>

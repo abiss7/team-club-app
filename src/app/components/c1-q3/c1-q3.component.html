@@ -1,0 +1,34 @@
+<div class="card animate__animated animate__fadeInRight">
+    <div class="card-header">
+        <strong>Categoría Formal: </strong>
+        Pregunta 3
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Cómo se pensaba Credencial Virtual en la etapa previa a empezar?</h5>
+
+        <form [formGroup]="formGroup" novalidate="novalidate" (submit)="continue($event)">
+
+            <div class="form-group mt-5">
+                <div class="custom-control custom-radio">
+                    <input type="radio" formControlName="question" id="opcion1" name="question" value="Un sitio Web que iba a generar códigos aleatorios y validarse contra una API by Fernándo"
+                        class="custom-control-input">
+                    <label class="custom-control-label" for="opcion1">Un sitio Web que iba a generar códigos aleatorios y validarse contra una API by Fernándo</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" formControlName="question" id="opcion2" name="question" value="Ya desde el inicio se pensó en un sitio que pudiera escanear QRs"
+                        class="custom-control-input">
+                    <label class="custom-control-label" for="opcion2">Ya desde el inicio se pensó en un sitio que pudiera escanear QRs</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" formControlName="question" id="opcion3" name="question" value="Ya desde el inicio se pensó en un sitio que pudiera leer QRs con Sockets"
+                        class="custom-control-input">
+                    <label class="custom-control-label" for="opcion3">Ya desde el inicio se pensó en un sitio que pudiera leer QRs con Sockets</label>
+                </div>
+            </div>
+    
+            <button type="submit" class="btn btn-primary mt-5" [disabled]="formGroup?.invalid">
+                Continuar
+            </button>
+        </form>
+    </div>
+</div>

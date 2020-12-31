@@ -51,8 +51,7 @@ export class QuestionComponent implements OnInit {
         errores: this.respuestas.slice(1).map(i => i.errores)
       };
 
-      const resp = await this.respuestaService.save(data);
-      console.log(resp);
+      await this.respuestaService.save(data);
     }
   }
 

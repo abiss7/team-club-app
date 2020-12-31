@@ -23,7 +23,7 @@ export class ResultComponent implements OnInit {
 
           return {
             name: r.name,
-            error: r.errores.length,
+            error: r.errores.filter(err => err > 0).length,
             preguntas: r.preguntas.length,
             respuestas: r.respuestas.length
           };

@@ -1,4 +1,9 @@
-<div class="row">
+<div *ngIf="resultados.length === 0" class="alert alert-primary mt-5" role="alert">
+    Aún no hay resultados
+  </div>
+
+
+<div class="row" *ngIf="resultados.length > 0">
     <div class="col-12">
 
         <div *ngFor="let r of resultados">

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -69,6 +70,7 @@ import { ConclusionComponent } from './components/conclusion/conclusion.componen
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
     PdfViewerModule
   ],
   providers: [],
